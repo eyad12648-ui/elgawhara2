@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="docTitle">شركة الجوهرة للتوزيع - الجوهرة للتسالي والمقرمشات بالجملة</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="ASSETS/لوجو.png">
+  <link rel="shortcut icon" href="ASSETS/لوجو.png">
+  <link rel="apple-touch-icon" href="ASSETS/لوجو.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="الجوهرة للتوزيع">
+  
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splashScreen" class="splash-screen">
+    <div class="splash-content">
+      <img src="ASSETS/لوجو.png" alt="الجوهرة" class="splash-logo">
+    </div>
+  </div>
+
+  <!-- Top Navbar -->
+  <header class="header">
+    <div class="nav-container">
+      <!-- Right (or Left in LTR): Logo & Brand Name -->
+      <a href="#hero" class="nav-brand">
+        <img src="ASSETS/لوجو.png" alt="الجوهرة للتوزيع" class="nav-logo-img">
+        <div class="brand-text">
+          <span class="brand-title" data-i18n="brandTitle">الجوهرة للتوزيع</span>
+          <span class="brand-sub" data-i18n="brandSub">للمقرمشات و التسالي بالجملة</span>
+        </div>
+      </a>
+
+      <!-- Center: Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <div class="nav-menu-header">
+          <a href="#hero" class="nav-brand-mobile">
+            <img src="ASSETS/لوجو.png" alt="الجوهرة" class="nav-logo-img-mobile">
+            <span class="brand-title-mobile" data-i18n="brandTitle">الجوهرة للتوزيع</span>
+          </a>
+          <button class="nav-menu-close" id="navMenuClose" aria-label="إغلاق القائمة">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active" data-i18n="navHome">الرئيسية</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="navAbout">من نحن</a></li>
+          <li><a href="#history" class="nav-link" data-i18n="navHistory">نبذة تاريخية</a></li>
+          <li><a href="#products" class="nav-link" data-i18n="navProducts">المنتجات</a></li>
+          <li><a href="#brands" class="nav-link" data-i18n="navBrands">الشركات التي نتعامل معها</a></li>
+          <li><a href="#distribution" class="nav-link" data-i18n="navDistribution">مناطق التوزيع</a></li>
+          <li><a href="#testimonials" class="nav-link" data-i18n="navTestimonials">آراء العملاء</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="navFaq">الأسئلة الشائعة</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="navContact">تواصل معنا</a></li>
+        </ul>
+        <div class="nav-menu-footer">
+          <button class="theme-toggle-btn" id="themeToggleMobile" aria-label="تبديل المظهر">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="lang-switch-btn" id="langSwitchMobile" aria-label="تغيير اللغة">
+            <i class="fa-solid fa-globe"></i>
+            <span class="lang-text" id="langTextMobile">EN</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Action Controls: Theme Toggle & Language Switcher -->
+      <div class="nav-left">
+        <!-- Theme Toggle (Dark/Light Mode) -->
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="تبديل المظهر" title="تبديل الوضع الليلي / النهاري">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- Language Switcher -->
+        <button class="lang-switch-btn" id="langSwitch" aria-label="تغيير اللغة" title="Change Language">
+          <i class="fa-solid fa-globe"></i>
+          <span class="lang-text" id="langText">EN</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overlay for mobile menu -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <main>
+    <!-- 3. Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <!-- Right side: Text & Info -->
+        <div class="hero-content">
+          <h1 class="hero-title" data-i18n="heroTitle">الجوهرة للتوزيع</h1>
+          <h2 class="hero-subtitle" data-i18n="heroSubtitle">شريكك الموثوق في توزيع جميع أنواع التسالي بالجملة</h2>
+          <p class="hero-desc" data-i18n="heroDesc">
+            نقدم لكم أجود أصناف التسالي والمقرمشات بأفضل الأسعار التنافسية وبأعلى معايير الجودة، مع تغطية شاملة وشبكة توزيع سريعة ومنضبطة تصل لكافة عملائنا.
+          </p>
+          <div class="hero-badges">
+            <span class="hero-badge"><i class="fa-solid fa-check"></i> <span data-i18n="heroBadge1">جودة عالية</span></span>
+            <span class="hero-badge"><i class="fa-solid fa-check"></i> <span data-i18n="heroBadge2">أسعار تنافسية</span></span>
+            <span class="hero-badge"><i class="fa-solid fa-check"></i> <span data-i18n="heroBadge3">تغطية واسعة</span></span>
+          </div>
+          <div class="hero-cta-wrapper">
+            <a href="#contact" class="btn-primary hero-btn">
+              <span data-i18n="heroCta">تواصل معنا</span>
+              <i class="fa-solid fa-arrow-left arrow-dynamic"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Left side: Big Company Logo Showcase -->
+        <div class="hero-showcase">
+          <div class="hero-logo-frame">
+            <div class="logo-glow"></div>
+            <img src="ASSETS/لوجو.png" alt="شعار شركة الجوهرة للتوزيع" class="hero-main-logo">
+            <div class="floating-badge badge-top">
+              <i class="fa-solid fa-award"></i>
+              <span data-i18n="badgeTrust">ثقة وضمان</span>
+            </div>
+            <div class="floating-badge badge-bottom">
+              <i class="fa-solid fa-truck-fast"></i>
+              <span data-i18n="badgeSupply">توريد جملة فوري</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Bottom Indicators Slider & Curved Wave -->
+      <div class="hero-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+
+      <!-- Wave Decoration -->
+      <div class="hero-waves">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path class="wave-path" d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,58.7C840,43,960,21,1080,21.3C1200,21,1320,43,1380,53.3L1440,64L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 4. About Us -->
+    <section class="section about-section" id="about">
+      <div class="container section-split">
+        <!-- Left: Truck image placeholder -->
+        <div class="split-visual">
+          <div class="image-placeholder truck-placeholder">
+            <div class="placeholder-icon-wrap">
+              <i class="fa-solid fa-truck"></i>
+            </div>
+            <div class="placeholder-content">
+              <span class="placeholder-title" data-i18n="truckPlaceholderTitle">مساحة مخصصة لصورة شاحنة توزيع الشركة</span>
+              <span class="placeholder-sub" data-i18n="truckPlaceholderSub">سيتم إدراج صورة أسطول النقل والتوزيع لاحقاً</span>
+            </div>
+            <div class="placeholder-border"></div>
+          </div>
+        </div>
+
+        <!-- Right: Text Content -->
+        <div class="split-content">
+          <div class="section-title-wrap text-start">
+            <h2 class="section-title" data-i18n="aboutTitle">من نحن</h2>
+            <div class="title-bar"></div>
+          </div>
+          <p class="section-desc text-start" data-i18n="aboutDesc1">
+            نحن <strong>شركة الجوهرة للتوزيع</strong>، إحدى الشركات الرائدة والمتخصصة في تجارة وتوزيع وتسويق منكهات التسالي والمقرمشات بكافة أنواعها بالجملة. نحرص دائماً على تقديم أفضل المنتجات بأعلى مستويات الجودة وأنسب الأسعار لعملائنا الكرام من تجار الجملة والتجزئة والمحلات في جميع أنحاء الجمهورية.
+          </p>
+          <p class="section-subtext" data-i18n="aboutDesc2">
+            نلتزم بالدقة والاحترافية وسرعة التوريد الدائم من خلال أسطول توزيع مجهز يضمن وصول المنتجات طازجة ومحفوظة وفق أعلى معايير السلامة والجودة الغذائية.
+          </p>
+          <div class="btn-group">
+            <a href="#features" class="btn-primary">
+              <span data-i18n="learnMore">اعرف المزيد</span>
+              <i class="fa-solid fa-arrow-left arrow-dynamic"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Features -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="features-grid">
+          <!-- 1. جودة مضمونة -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h3 class="feature-title" data-i18n="feat1Title">جودة مضمونة</h3>
+            <p class="feature-desc" data-i18n="feat1Desc">أعلى معايير الجودة في كافة المنتجات لضمان رضا عملائنا</p>
+          </div>
+
+          <!-- 2. شراكات قوية -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <h3 class="feature-title" data-i18n="feat2Title">شراكات قوية</h3>
+            <p class="feature-desc" data-i18n="feat2Desc">تعامل مباشر وموثوق مع أكبر المصانع والعلامات التجارية</p>
+          </div>
+
+          <!-- 3. تغطية واسعة -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h3 class="feature-title" data-i18n="feat3Title">تغطية واسعة</h3>
+            <p class="feature-desc" data-i18n="feat3Desc">شبكة شحن وتوزيع مرنة تغطي محافظات الوجه البحري والقبلي</p>
+          </div>
+
+          <!-- 4. أسعار تنافسية -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-tags"></i>
+            </div>
+            <h3 class="feature-title" data-i18n="feat4Title">أسعار تنافسية</h3>
+            <p class="feature-desc" data-i18n="feat4Desc">أفضل عروض وأسعار جملة تمنح شركاءنا هوامش ربح ممتازة</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Products -->
+    <section class="section products-section" id="products">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title" data-i18n="productsTitle">المنتجات</h2>
+          <div class="title-bar center"></div>
+          <p class="section-subtitle" data-i18n="productsSubtitle">مجموعة متنوعة من أفضل منتجات التسالي</p>
+        </div>
+
+        <div class="products-grid">
+          <!-- Card 1 -->
+          <div class="product-card">
+            <div class="product-img-placeholder">
+              <i class="fa-solid fa-seedling"></i>
+              <span data-i18n="productImgSpace">مساحة صورة المنتج</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name" data-i18n="prodSunflower">لب عباد شمس</h3>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="product-card">
+            <div class="product-img-placeholder">
+              <i class="fa-solid fa-star"></i>
+              <span data-i18n="productImgSpace">مساحة صورة المنتج</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name" data-i18n="prodSuper">لب سوبر عالي الجودة</h3>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="product-card">
+            <div class="product-img-placeholder">
+              <i class="fa-solid fa-bowl-food"></i>
+              <span data-i18n="productImgSpace">مساحة صورة المنتج</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name" data-i18n="prodCrackers">مقرمشات</h3>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="product-card">
+            <div class="product-img-placeholder">
+              <i class="fa-solid fa-cubes-stacked"></i>
+              <span data-i18n="productImgSpace">مساحة صورة المنتج</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name" data-i18n="prodPeanuts">فول سوداني</h3>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="product-card">
+            <div class="product-img-placeholder">
+              <i class="fa-solid fa-candy-cane"></i>
+              <span data-i18n="productImgSpace">مساحة صورة المنتج</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name" data-i18n="prodSweets">حلويات</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-action text-center">
+          <a href="#contact" class="btn-primary">
+            <span data-i18n="exploreAll">استكشف جميع المنتجات</span>
+            <i class="fa-solid fa-arrow-left arrow-dynamic"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Brands -->
+    <section class="section brands-section" id="brands">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title" data-i18n="brandsTitle">الشركات التي نتعامل معها</h2>
+          <div class="title-bar center"></div>
+          <p class="section-subtitle" data-i18n="brandsSubtitle">نفخر بالتعاون مع كبرى العلامات التجارية الرائدة</p>
+        </div>
+
+        <div class="brands-carousel-container">
+          <button class="carousel-nav-btn prev" id="brandPrev" aria-label="السابق">
+            <i class="fa-solid fa-chevron-right carousel-arrow-prev"></i>
+          </button>
+          
+          <div class="brands-wrapper" id="brandsWrapper">
+            <div class="brands-track" id="brandsTrack">
+              <div class="brand-item">
+                <span class="brand-name font-lays">Lay's</span>
+              </div>
+              <div class="brand-item">
+                <span class="brand-name font-doritos">Doritos</span>
+              </div>
+              <div class="brand-item">
+                <span class="brand-name font-cheetos">Cheetos</span>
+              </div>
+              <div class="brand-item">
+                <span class="brand-name font-ringo">Ringo</span>
+              </div>
+              <div class="brand-item">
+                <span class="brand-name font-cadbury">Cadbury</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-nav-btn next" id="brandNext" aria-label="التالي">
+            <i class="fa-solid fa-chevron-left carousel-arrow-next"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. History -->
+    <section class="section history-section" id="history">
+      <div class="container section-split">
+        <!-- Left: Warehouse image placeholder -->
+        <div class="split-visual">
+          <div class="image-placeholder warehouse-placeholder">
+            <div class="placeholder-icon-wrap">
+              <i class="fa-solid fa-warehouse"></i>
+            </div>
+            <div class="placeholder-content">
+              <span class="placeholder-title" data-i18n="whPlaceholderTitle">مساحة مخصصة لصورة مستودع البضائع</span>
+              <span class="placeholder-sub" data-i18n="whPlaceholderSub">سيتم إدراج صورة المخازن ومستودعات التوزيع لاحقاً</span>
+            </div>
+            <div class="placeholder-border"></div>
+          </div>
+        </div>
+
+        <!-- Right: History Content -->
+        <div class="split-content">
+          <div class="section-title-wrap text-start">
+            <h2 class="section-title" data-i18n="historyTitle">نبذة تاريخية</h2>
+            <div class="title-bar"></div>
+          </div>
+
+          <div class="history-meta">
+            <div class="history-meta-box">
+              <div class="meta-icon"><i class="fa-solid fa-calendar-days"></i></div>
+              <div class="meta-text">
+                <span class="meta-label" data-i18n="metaFoundLabel">تاريخ التأسيس</span>
+                <strong class="meta-val">2012</strong>
+              </div>
+            </div>
+            <div class="history-meta-box">
+              <div class="meta-icon"><i class="fa-solid fa-users-gear"></i></div>
+              <div class="meta-text">
+                <span class="meta-label" data-i18n="metaFounderLabel">المؤسس</span>
+                <strong class="meta-val" data-i18n="metaFounderVal">شراكة تأسيس</strong>
+              </div>
+            </div>
+          </div>
+
+          <p class="section-desc text-start" data-i18n="historyDesc1">
+            بدأت رحلتنا في عالم توزيع التسالي والمقرمشات منذ عام 2012، حيث انطلقت الشركة برؤية طموحة تهدف إلى إرساء معايير جديدة في خدمات التوريد والتوزيع بالجملة.
+          </p>
+          <p class="section-subtext" data-i18n="historyDesc2">
+            وعلى مدار أكثر من عقد من الزمان، نجحنا بفضل الله في توسيع نطاق أعمالنا وبناء قاعدة عملاء صلبة وشبكة علاقات متينة قائمة على الأمانة والالتزام وتوفير أجود المنتجات بأفضل الأسعار. مستمرون في التطوير والنمو لنكون دائماً الخيار الأول والموثوق لكافة عملائنا.
+          </p>
+          <div class="btn-group">
+            <a href="#contact" class="btn-primary">
+              <span data-i18n="historyBtn">اعرف المزيد عن تاريخنا</span>
+              <i class="fa-solid fa-arrow-left arrow-dynamic"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Testimonials -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title" data-i18n="testimonialsTitle">آراء العملاء</h2>
+          <div class="title-bar center"></div>
+          <p class="section-subtitle" data-i18n="testimonialsSubtitle">ثقة عملائنا هي سر نجاحنا المستمر</p>
+        </div>
+
+        <div class="testimonial-container section-split">
+          <!-- Left: Agreement Image -->
+          <div class="split-visual">
+            <a href="https://maps.app.goo.gl/7MMuRTjWztmFisQ58" target="_blank" rel="noopener noreferrer" class="handshake-image-link" aria-label="موقع الشركة على خرائط جوجل">
+              <img src="ASSETS/الاتفاق.jfif" alt="اتفاقية الشراكة - شركة الجوهرة للتوزيع" class="handshake-image">
+            </a>
+          </div>
+
+          <!-- Right: Testimonial Card with Navigation -->
+          <div class="testimonial-card-wrapper" id="testimonialWrapper">
+            <div class="testi-slider-row">
+              <button class="testi-btn prev" id="testiPrev" aria-label="الرأي السابق">
+                <i class="fa-solid fa-chevron-right carousel-arrow-prev"></i>
+              </button>
+
+              <div class="testimonial-card" id="testiCard">
+                <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                <p class="testimonial-text" id="testiQuote">
+                  "شركة متميزة في التعامل، وأسعارها مناسبة جداً، والتوصيل دائماً في الموعد المحدد مع التزام تام بالجودة العالية في كافة أصناف التسالي."
+                </p>
+                <div class="testimonial-rating" id="testiStars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="client-info">
+                  <div class="client-avatar-placeholder" id="testiAvatar">
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <div class="client-details">
+                    <h4 class="client-name" id="testiName">أحمد محمد</h4>
+                    <span class="client-role" id="testiRole">تاجر جملة - كفر الشيخ</span>
+                  </div>
+                </div>
+              </div>
+
+              <button class="testi-btn next" id="testiNext" aria-label="الرأي التالي">
+                <i class="fa-solid fa-chevron-left carousel-arrow-next"></i>
+              </button>
+            </div>
+
+            <!-- Indicators -->
+            <div class="testi-indicators" id="testiIndicators"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Distribution Areas (Completely Redesigned - Map Removed) -->
+    <section class="section distribution-section" id="distribution">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title" data-i18n="distTitle">مناطق التوزيع</h2>
+          <div class="title-bar center"></div>
+          <p class="section-subtitle" data-i18n="distSubtitle">نغطي مناطق الوجه البحري والوجه القبلي لتوفير منتجاتنا لعملائنا في مختلف أنحاء الجمهورية</p>
+        </div>
+
+        <!-- 2 Big Modern Distribution Cards with Pure SVG Icons & Spread Decorations -->
+        <div class="dist-cards-container">
+          <!-- Card 1: Lower / Coastal Egypt (الوجه البحري) -->
+          <div class="dist-premium-card card-coastal">
+            <div class="dist-card-inner">
+              <div class="dist-top-bar">
+                <div class="dist-main-icon">
+                  <!-- SVG Waves & Compass -->
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="dist-svg">
+                    <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 2"/>
+                    <path d="M24 8L28 20L40 24L28 28L24 40L20 28L8 24L20 20L24 8Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <circle cx="24" cy="24" r="3" fill="currentColor"/>
+                  </svg>
+                </div>
+                <span class="dist-tag tag-coastal" data-i18n="tagCoastal">تغطية شاملة للمحافظات الشمالية</span>
+              </div>
+
+              <div class="dist-card-body">
+                <h3 class="dist-card-title" data-i18n="cardLowerTitle">الوجه البحري</h3>
+                <p class="dist-card-brief" data-i18n="cardLowerBrief">
+                  نقدم خدمات توزيع وتوريد متكاملة تغطي كافة محافظات ومدن وقرى الوجه البحري والدلتا والقناة والإسكندرية مع جدول توريد أسبوعي ثابت ومنتظم.
+                </p>
+
+                <!-- Distribution Highlights -->
+                <div class="dist-highlights">
+                  <div class="highlight-item">
+                    <div class="hl-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                    <div class="hl-text">
+                      <strong data-i18n="hlLower1T">توريد أسبوعي دوري</strong>
+                      <span data-i18n="hlLower1D">شحن مباشر وسريع لمحلات ومخازن الجملة</span>
+                    </div>
+                  </div>
+                  <div class="highlight-item">
+                    <div class="hl-icon"><i class="fa-solid fa-city"></i></div>
+                    <div class="hl-text">
+                      <strong data-i18n="hlLower2T">مراكز التوزيع الكبرى</strong>
+                      <span data-i18n="hlLower2D">كفر الشيخ، الدلتا، الإسكندرية، مدن القناة</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Regions Tags -->
+                <div class="dist-provinces-pills">
+                  <span class="prov-pill" data-i18n="prov1">كفر الشيخ</span>
+                  <span class="prov-pill" data-i18n="prov2">الغربية</span>
+                  <span class="prov-pill" data-i18n="prov3">الدقهلية</span>
+                  <span class="prov-pill" data-i18n="prov4">البحيرة</span>
+                  <span class="prov-pill" data-i18n="prov5">الإسكندرية</span>
+                  <span class="prov-pill" data-i18n="prov6">مدن القناة</span>
+                </div>
+              </div>
+
+              <div class="dist-card-footer">
+                <div class="status-indicator">
+                  <span class="pulse-dot"></span>
+                  <span class="status-label" data-i18n="statusActiveDaily">خطوط شحن نشطة يومياً</span>
+                </div>
+                <a href="#contact" class="dist-btn-link">
+                  <span data-i18n="orderNow">اطلب توريد منطقتك</span>
+                  <i class="fa-solid fa-arrow-left arrow-dynamic"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Decorative Geo Pattern -->
+            <div class="geo-decor-ring ring-1"></div>
+            <div class="geo-decor-ring ring-2"></div>
+          </div>
+
+          <!-- Card 2: Upper Egypt (الوجه القبلي) -->
+          <div class="dist-premium-card card-upper">
+            <div class="dist-card-inner">
+              <div class="dist-top-bar">
+                <div class="dist-main-icon">
+                  <!-- SVG Route Network -->
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="dist-svg">
+                    <path d="M12 10C12 7.79086 13.7909 6 16 6H32C34.2091 6 36 7.79086 36 10V38C36 40.2091 34.2091 42 32 42H16C13.7909 42 12 40.2091 12 38V10Z" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6 3"/>
+                    <circle cx="24" cy="14" r="4" fill="currentColor"/>
+                    <circle cx="24" cy="24" r="4" fill="currentColor" fill-opacity="0.7"/>
+                    <circle cx="24" cy="34" r="4" fill="currentColor"/>
+                    <line x1="24" y1="18" x2="24" y2="30" stroke="currentColor" stroke-width="2.5"/>
+                  </svg>
+                </div>
+                <span class="dist-tag tag-upper" data-i18n="tagUpper">خطوط إمداد ممتدة لمحافظات الصعيد</span>
+              </div>
+
+              <div class="dist-card-body">
+                <h3 class="dist-card-title" data-i18n="cardUpperTitle">الوجه القبلي</h3>
+                <p class="dist-card-brief" data-i18n="cardUpperBrief">
+                  نمتلك أسطول نقل مجهز ومسارات شحن دورية تغطي كافة محافظات الصعيد، لضمان وصول شحنات التسالي والمقرمشات بالجملة بأمان تام وجودة طازجة.
+                </p>
+
+                <!-- Distribution Highlights -->
+                <div class="dist-highlights">
+                  <div class="highlight-item">
+                    <div class="hl-icon"><i class="fa-solid fa-boxes-packing"></i></div>
+                    <div class="hl-text">
+                      <strong data-i18n="hlUpper1T">شحن كميات ضخمة</strong>
+                      <span data-i18n="hlUpper1D">سيارات نقل كبرى مجهزة لتوريد طلبيات الجملة</span>
+                    </div>
+                  </div>
+                  <div class="highlight-item">
+                    <div class="hl-icon"><i class="fa-solid fa-route"></i></div>
+                    <div class="hl-text">
+                      <strong data-i18n="hlUpper2T">خطوط توريد منتظمة</strong>
+                      <span data-i18n="hlUpper2D">بني سويف، المنيا، أسيوط، سوهاج، قنا، أسوان</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Regions Tags -->
+                <div class="dist-provinces-pills">
+                  <span class="prov-pill" data-i18n="prov7">بني سويف والمنيا</span>
+                  <span class="prov-pill" data-i18n="prov8">أسيوط وسوهاج</span>
+                  <span class="prov-pill" data-i18n="prov9">قنا والأقصر</span>
+                  <span class="prov-pill" data-i18n="prov10">أسوان</span>
+                  <span class="prov-pill" data-i18n="prov11">البحر الأحمر</span>
+                </div>
+              </div>
+
+              <div class="dist-card-footer">
+                <div class="status-indicator">
+                  <span class="pulse-dot green"></span>
+                  <span class="status-label" data-i18n="statusActiveDirect">شحن مباشر متوفر أسبوعياً</span>
+                </div>
+                <a href="#contact" class="dist-btn-link">
+                  <span data-i18n="orderNow">اطلب توريد منطقتك</span>
+                  <i class="fa-solid fa-arrow-left arrow-dynamic"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Decorative Geo Pattern -->
+            <div class="geo-decor-ring ring-1"></div>
+            <div class="geo-decor-ring ring-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. FAQ -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title" data-i18n="faqTitle">الأسئلة الشائعة</h2>
+          <div class="title-bar center"></div>
+          <p class="section-subtitle" data-i18n="faqSubtitle">إجابات على أكثر الأسئلة شيوعاً</p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span data-i18n="faqQ1">ما هو الحد الأدنى للطلب بالجملة؟</span>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faqA1">نحرص على تيسير التعامل مع كافة عملائنا؛ يتم تحديد الحد الأدنى للطلب بحسب نوع الصنف والكميات المطلوبة للمحافظة، ويمكنكم التواصل معنا هاتفياً أو عبر واتساب لتحديد متطلباتكم بدقة وتقديم أنسب عرض سعر.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faqQ2">هل يوجد توصيل لجميع المحافظات؟</span>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faqA2">نعم، تغطي شبكة توزيعنا محافظات الوجه البحري بالكامل ومحافظات الوجه القبلي من خلال خطوط توريد منتظمة وسيارات شحن مجهزة تضمن وصول طلبياتكم في أسرع وقت.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faqQ3">ما هي طرق الدفع المتاحة؟</span>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faqA3">نوفر خيارات دفع مرنة تناسب تجار الجملة والتجزئة، بما يشمل الدفع النقدي عند الاستلام، والتحويلات البنكية المباشرة، والمحافظ الإلكترونية بما يتوافق مع سياسة التوريد المتفق عليها.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faqQ4">كيف يمكنني طلب قائمة أسعار المنتجات المحدثة؟</span>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faqA4">يمكنكم ببساطة مراسلتنا عبر الواتساب على الرقم 01000854324 أو الاتصال المباشر بفريق المبيعات، وسنقوم بإرسال أحدث قائمة أسعار تشمل جميع المنتجات المتاحة والخصومات المخصصة للكميات الكبيرة.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faqQ5">هل المنتجات مضمونة الصلاحية والجودة؟</span>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faqA5">بالتأكيد، كافة بضائعنا ومنتجات التسالي والمقرمشات مخزنة في مستودعات ومخازن مجهزة وفق أعلى معايير الجودة الغذائية، وتصلكم طازجة وبأحدث فترات الصلاحية الإنتاجية مباشرة من المصانع المعتمدة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Contact Us (With Live Google Maps maintained) -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left (or Right): Dark Navy Contact Card with Interactive WhatsApp Form -->
+          <div class="contact-card">
+            <div class="contact-card-header">
+              <h2 class="contact-card-title" data-i18n="contactTitle">تواصل معنا</h2>
+              <p class="contact-card-subtitle" data-i18n="contactSubtitle">يسعدنا تواصلك معنا في أي وقت للإجابة على استفساراتكم واستقبال طلبات الجملة والتوزيع</p>
+            </div>
+
+            <!-- Contact Form to WhatsApp -->
+            <form class="contact-form" id="contactWhatsAppForm">
+              <div class="form-group">
+                <label for="contactName" class="form-label" data-i18n="formLabelName">الاسم</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input type="text" id="contactName" class="form-input" placeholder="أدخل اسمك بالكامل" data-i18n-ph="phName" required>
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label" data-i18n="formLabelEmail">الايميل</label>
+                  <div class="input-wrap">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" id="contactEmail" class="form-input" placeholder="example@email.com" data-i18n-ph="phEmail" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactPhone" class="form-label" data-i18n="formLabelPhone">الرقم</label>
+                  <div class="input-wrap">
+                    <i class="fa-solid fa-phone input-icon"></i>
+                    <input type="tel" id="contactPhone" class="form-input" placeholder="010XXXXXXXX" data-i18n-ph="phPhone" dir="ltr" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label" data-i18n="formLabelMessage">الرساله</label>
+                <div class="input-wrap textarea-wrap">
+                  <i class="fa-solid fa-comment-dots input-icon textarea-icon"></i>
+                  <textarea id="contactMessage" class="form-input form-textarea" rows="4" placeholder="اكتب تفاصيل طلبك أو استفسارك هنا..." data-i18n-ph="phMessage" required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-primary form-submit-btn">
+                <i class="fa-brands fa-whatsapp whatsapp-btn-icon"></i>
+                <span data-i18n="formSubmitBtn">إرسال عبر واتساب</span>
+              </button>
+            </form>
+
+            <!-- Address and Social links -->
+            <div class="contact-footer-info">
+              <div class="contact-hq-address">
+                <i class="fa-solid fa-location-dot"></i>
+                <span data-i18n="methodAddress">عزبة قبيبة القبلية - مركز دسوق - محافظة كفر الشيخ</span>
+              </div>
+              <div class="social-links-list">
+                <a href="https://www.facebook.com/share/1L3D5VDYoo/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="فيسبوك">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://wa.me/201000854324" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" aria-label="واتساب">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-card-decoration">
+              <i class="fa-solid fa-paper-plane plane-icon"></i>
+            </div>
+          </div>
+
+          <!-- Right: Google Maps Live Embedded Iframe (Kept intact) -->
+          <div class="contact-map-wrapper">
+            <div class="map-frame-box">
+              <div class="map-badge">
+                <i class="fa-solid fa-location-dot"></i>
+                <span data-i18n="mapBadge">موقع الشركة الفعلي - دسوق</span>
+              </div>
+              <iframe 
+                src="https://maps.google.com/maps?q=31.1882057,30.6669369&hl=ar&z=15&output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="موقع شركة الجوهرة للتوزيع على خرائط جوجل">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 13. Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Column 1: Company Info -->
+        <div class="footer-col footer-col-brand">
+          <a href="#hero" class="footer-logo">
+            <img src="ASSETS/لوجو.png" alt="الجوهرة للتوزيع" class="footer-logo-img">
+            <div class="footer-brand-text">
+              <span class="footer-brand-name" data-i18n="brandTitle">الجوهرة للتوزيع</span>
+              <span class="footer-brand-sub" data-i18n="brandSub">للمقرمشات والتسالي بالجملة</span>
+            </div>
+          </a>
+          <p class="footer-desc" data-i18n="footerDesc">
+            شركة رائدة في توزيع وتسويق منكهات التسالي والمقرمشات بالجملة، نلتزم بأعلى معايير الجودة وأسرع خطوط التوريد.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/share/1L3D5VDYoo/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="Facebook" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/201000854324" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="WhatsApp" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n="footerQuickLinks">روابط سريعة</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero" data-i18n="navHome">الرئيسية</a></li>
+            <li><a href="#about" data-i18n="navAbout">من نحن</a></li>
+            <li><a href="#history" data-i18n="navHistory">نبذة تاريخية</a></li>
+            <li><a href="#products" data-i18n="navProducts">المنتجات</a></li>
+            <li><a href="#distribution" data-i18n="navDistribution">مناطق التوزيع</a></li>
+            <li><a href="#testimonials" data-i18n="navTestimonials">آراء العملاء</a></li>
+            <li><a href="#faq" data-i18n="navFaq">الأسئلة الشائعة</a></li>
+            <li><a href="#contact" data-i18n="navContact">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Products -->
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n="footerProducts">المنتجات</h4>
+          <ul class="footer-links-list">
+            <li><a href="#products" data-i18n="prodSunflower">لب عباد شمس</a></li>
+            <li><a href="#products" data-i18n="prodSuper">لب سوبر عالي الجودة</a></li>
+            <li><a href="#products" data-i18n="prodCrackers">مقرمشات</a></li>
+            <li><a href="#products" data-i18n="prodPeanuts">فول سوداني</a></li>
+            <li><a href="#products" data-i18n="prodSweets">حلويات</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Info -->
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n="footerContactUs">تواصل معنا</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <a href="https://maps.app.goo.gl/7MMuRTjWztmFisQ58" target="_blank" rel="noopener noreferrer" data-i18n="methodAddress">عزبة قبيبة القبلية - مركز دسوق - محافظة كفر الشيخ</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:01000854324" dir="ltr">01000854324</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/201000854324" target="_blank" rel="noopener noreferrer" dir="ltr">01000854324</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:info@aljawhara.com">info@aljawhara.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-content">
+        <p class="footer-copyright">
+          &copy; <span id="currentYear">2026</span> <span data-i18n="copyrightText">جميع الحقوق محفوظة - شركة الجوهرة للتوزيع</span>
+        </p>
+        <p class="footer-dev-credit">
+          <span data-i18n="devByPrefix">تم التطوير بواسطة</span>
+          <a href="https://eyad12648-ui.github.io/portofolio/" target="_blank" rel="noopener noreferrer" class="footer-dev-link">CODEVIX</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 1. Floating WhatsApp Button (Fixed on bottom-left for RTL, responsive, with tooltip) -->
+  <div class="whatsapp-floating-wrap">
+    <a href="https://wa.me/201000854324" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="تواصل معنا عبر واتساب">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="whatsapp-tooltip" data-i18n="whatsappTooltip">تواصل معنا عبر واتساب</span>
+      <span class="wa-pulse-ring"></span>
+    </a>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="main.js"></script>
+</body>
+</html>
